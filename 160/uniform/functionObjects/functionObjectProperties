@@ -1,0 +1,79 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2006                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "160/uniform/functionObjects";
+    object      functionObjectProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+results
+{
+    Forces
+    {
+        vector
+        {
+            normalForce     ( 0.0164767 0.008119909999999999 -1.60006e-20 );
+            tangentialForce ( 0.000311102 2.95135e-05 -7.56293e-20 );
+            porousForce     ( 0 0 0 );
+            normalMoment    ( -0.0101499 0.0205958 7.31666e-09 );
+            tangentialMoment ( -3.68919e-05 0.000388878 -3.91106e-06 );
+            porousMoment    ( 0 0 0 );
+        }
+    }
+    ForcesCoeffs
+    {
+        scalar
+        {
+            Cd              2.399128050364799;
+            Cs              1.3094765801093e-17;
+            Cl              1.164627927407212;
+            CmRoll          -1.455784909259094;
+            CmPitch         0.0005578806210952661;
+            CmYaw           2.998910062956054;
+            Cd(f)           -0.2562208840766949;
+            Cd(r)           2.655348934441494;
+            Cs(f)           2.998910062956054;
+            Cs(r)           -2.998910062956054;
+            Cl(f)           0.5828718443247013;
+            Cl(r)           0.5817560830825107;
+        }
+    }
+}
+
+fieldAverage1
+{
+    U
+    {
+        totalIter       252562;
+        totalTime       160.0006312660115;
+    }
+    p
+    {
+        totalIter       252562;
+        totalTime       160.0006312660115;
+    }
+}
+
+Sample
+{
+    p
+    {
+        file            "<case>/postProcessing/Sample/160/bottom_p.xy";
+    }
+    UMean
+    {
+        file            "<case>/postProcessing/Sample/160/bottom_UMean.xy";
+    }
+}
+
+
+// ************************************************************************* //
